@@ -1,0 +1,58 @@
+.bg{
+    background: url('../images/How-.jpg') no-repeat;
+    width: 100%;
+    height: 100vh;
+    background-size: 230%;
+    
+
+}
+.main{
+    width: 800px;
+    height: 1200px;
+    background-color: #fff;
+    margin: 0 auto;
+}
+.head{
+    width: 100%;
+    height: 50px;
+    background-color: rgb(161, 167, 245);
+}
+.head1{
+    width: 100%;
+    height: 50px;
+    background-color: rgb(102, 228, 169);
+}
+
+.banner{
+    width: 90%;
+    height: 300px;
+    background-color: rgb(228, 245, 169);
+    margin: 0 auto;
+}
+.banner1{
+    width: 90%;
+    height: 300px;
+    background-color: rgb(228, 245, 169);
+     margin: 0 auto;
+
+}
+.banner2{
+    width: 90%;
+    height: 300px;
+    background-color: rgb(228, 245, 169);
+    vertical-align: middle;
+    margin: 0 auto;
+}
+.button{
+    width: 100%;
+    height: 200px;
+    background-color: blanchedalmond;
+}
+
+     
+}
+@media only screen and (max-width: 678px){
+    .bg{
+     background-size: 300%;   
+    }
+}
