@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>POST | BLOG</title>
+  <link rel="stylesheet" href="static/css/bootstrap-reboot.min.css">
+  <link rel="stylesheet" href="static/css/bootstrap.css">
+  <link rel="stylesheet" href="static/css/bootstrap.css">
+  <link rel="stylesheet" href="static/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="static/css/global19.css">
+
+
+</head>
+
+<body class="bg">
+  
+    
+      <div class="main col-sm">
+        <div class="head">
+          <strong>
+            <font size="+3">Blog|post</font>
+          </strong>
+        </div>
+        <div class="container">
+          {% for i in post_obj %}
+          <div class="card">
+          <img src="{{i.post_pic}}" alt="" height="400px" width="720px">
+          <h5 class="card-text">{{i.description}}</h5> 
+          {% endfor %}
+          </div>
+        </div>
+
+        <div class="button">
+          <br>
+          {% for i in post_obj %}
+          <form action="see_post" method="POST">
+            {% csrf_token %}
+            <button  value="{{i.id}}" name="post_id"class="btn btn-success btn-lg">    
+              {% if check1 %} 
+                Unlike&nbsp
+            {% else %}
+              Like
+            {% endif %}            
+                        
+            {{i.likes_count}}</button>
+            
+          </form>
+           
+         
+
+          <br>
+          <form action="blog_comment" method="POST">
+            {% csrf_token %}
+          <p><input type="text" class="form-control"  placeholder="comment here" name="comment"></p>
+          <input type="hidden" class="form-control"  placeholder="comment here" name="post_id" value="{{i.id}}">
+          <input type="hidden" name="p_id" value="{{post_id}}">
+          
+            <pre>   <button  class="btn btn-primary btn-lg" >Comment</button>  </pre>
+            </form>
+             {% endfor %}
+          
+             {% for i in l %}
+             <b>{{i.commenter_email}}</b>
+          </br>
+               {{i.comment}}
+          </br>
+              {% endfor %}
+             
+          </div>
+
+
+
+
+      </div>
+
+
+
+    
+
+
+
+
+
+  
+</body>
+
+</html>

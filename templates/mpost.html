@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>POST | BLOG</title>
+  <link rel="stylesheet" href="static/css/bootstrap-reboot.min.css">
+  <link rel="stylesheet" href="static/css/bootstrap.css">
+  <link rel="stylesheet" type="text/css" href="static/css/global20.css">
+
+
+</head>
+
+<body class="bg">
+  
+    
+
+
+      <div class="main">
+
+        <div class="head">
+          <strong>
+            <font size="+3">Blog|post List</font>
+          </strong>
+        </div>
+    
+        <div class="head1">
+            
+            <button type="button" class="btn btn-primary"><strong>popular</strong></button>
+            <button type="button" class="btn btn-success"><strong>latest</strong></button>
+            <button type="button" class="btn btn-danger"><strong>Sorted</strong></button>
+            
+          </div>
+         {% if messages %}
+          {% for message in messages %}
+          {% if message.tags %} <div class="mt-2" class="{{ message.tags }}">{% endif %} <h4 style="color:red;font-family:vardana;text-align:center">{{ message }}</h4>
+             {% endfor %}
+          {% else %}
+          <br>
+
+        <div class="banner">
+          <form action="see_post">
+          <h5 class="card-title"><button class="col-md  button btn btn-warning" type="hidden" value="{{multi_post.0.id}}" name="post_id"><h1>{{multi_post.0.blog_heading}}</h1</h5>
+          </form>
+            <img src="{{multi_post.0.post_pic}}" alt="" height="300px" width="720px" >
+        </div>
+      </br></br></br></br></br></br></br></br></br>
+      
+
+        <div class="banner1">
+          <form action="see_post">
+            <h5 class="card-title"><button class="col-md  button btn btn-warning" type="hidden" value="{{multi_post.1.id}}" name="post_id"><h1>{{multi_post.1.blog_heading}}</h1</h5>
+            </form>
+             <img src="{{multi_post.1.post_pic}}" alt="" height="300px" width="720px" >
+             
+          </div>
+          </br></br></br></br></br></br></br></br></br>
+
+          <div class="banner2">
+            <form action="see_post">
+              <h5 class="card-title"><button class="col-md  button btn btn-warning" type="hidden" value="{{multi_post.2.id}}" name="post_id"><h1>{{multi_post.2.blog_heading}}</h1</h5>
+              </form>
+            <img src="{{multi_post.2.post_pic}}" alt="" height="300px" width="720px">
+              
+          </div> 
+        </br></br></br></br></br></br></br></br></br>
+          
+
+          <div class="banner2">
+            <form action="see_post">
+              <h5 class="card-title"><button class="col-md  button btn btn-warning" type="hidden" value="{{multi_post.3.id}}" name="post_id"><h1>{{multi_post.3.blog_heading}}</h1</h5>
+              </form> 
+            <img src="{{multi_post.3.post_pic}}" alt="" height="300px" width="720px">
+              
+          </div> 
+          </br></br></br></br></br></br></br></br></br>
+          
+
+          <div class="banner2">
+            <form action="see_post">
+              <h5 class="card-title"><button class="col-md  button btn btn-warning" type="hidden" value="{{multi_post.4.id}}" name="post_id"><h1>{{multi_post.4.blog_heading}}</h1</h5>
+              </form>
+            <img src="{{multi_post.4.post_pic}}" alt="" height="300px" width="720px">
+              
+          </div> 
+        </br></br></br></br></br></br></br></br></br>
+          
+
+        <div class="button container px-5 ">
+          <br>
+       
+          <form action="post_list" method="POST">
+            {% csrf_token %}
+          <button class="btn btn-primary btn-lg ">NEXT</button> 
+          
+              </form>
+          &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+          &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+          &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+          &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+          &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+          &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+          &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+          
+
+              
+
+          
+         <button  type="button" class="btn btn-primary btn-lg ">PREVIEW</button> 
+         {% endif %}
+          
+        </div>
+
+
+
+
+      </div>
+
+
+
+    
+</body>
+
+</html>
