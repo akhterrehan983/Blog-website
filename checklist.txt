@@ -15,7 +15,7 @@
 - Add stuff to settings.py file
 - Install guincorn
 - pip freeze > requirements.txt
-- heroku create attreyaweb (to create an app on heroku)
+- heroku create myblogapp (to create an app on heroku)
 - git status git commands (git push heroku master)
-- Open up the website
+- Open up the website(http://myblogapp.herokuapp.com/register)
 - Admin panel not working. heroku run bash. Migrations
